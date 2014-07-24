@@ -1,0 +1,37 @@
+{
+  "name": "message-bus",
+  "description": "PubSub Implementation UMD Pattern",
+  "version": "0.1.0",
+  "homepage": "https://github.com/crishushu/message-bus",
+  "author": {
+    "name": "Christian H. Schulz",
+    "email": "crishushu@me.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crishushu/message-bus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crishushu/message-bus/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/crishushu/message-bus/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/message-bus",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2"
+  },
+  "keywords": []
+}
