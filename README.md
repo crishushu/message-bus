@@ -22,7 +22,7 @@ messageBus.register('login', function(credentials){
 }, users);
 ```
 
-###### Trigger the handler of the listener at some other place in your code:+
+###### Trigger the handler of the listener at some other place in your code:
 
 ```js
 function login(credentials) {
