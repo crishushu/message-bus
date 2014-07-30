@@ -1,18 +1,49 @@
 # message-bus
 
-PubSub Implementation UMD Pattern
+UMD PubSub Implementation
 
 ## Getting Started
 Install the module with: `npm install message-bus`
 
+
+###### Registration of a listener:
+
 ```javascript
-var message_bus = require('message-bus');
-message_bus.awesome(); // "awesome"
+var messageBus = require('message-bus');
+
+var users = [];
+
+function User (arg) {
+    // some constructor code here
+}
+
+messageBus.register('login', function(credentials){
+    this.push(new User(credentials))
+}, users);
+```
+
+###### Trigger the handler of the listener at some other place in your code:+
+
+```js
+function login(credentials) {
+    messageBus.fire('login', credentials);
+}
+
 ```
 
 ## Documentation
-_(Coming soon)_
+This package provides a framework-agnostic PubSub implementation and contains the following API:
 
+#### Register a listener
+ `register(eventName, functionHandler, executionContext)`
+#### Check for the existence of a registered listener object
+ `isAlreadyRegistered(listener)`
+#### Remove a listener by event name
+ `remove(eventName)`
+#### Trigger handler via event name
+ `fire(eventName)`
+
+<!--
 ## Examples
 _(Coming soon)_
 
@@ -21,6 +52,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _(Nothing yet)_
+-->
 
 ## License
 Copyright (c) 2014 Christian H. Schulz  
