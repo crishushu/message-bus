@@ -2,6 +2,19 @@
 
 UMD PubSub Implementation
 
+## Documentation
+This package provides a framework-agnostic PubSub implementation and contains the following API:
+
+#### Register a listener
+ `register(eventName, functionHandler, executionContext)`
+#### Check for the existence of a registered listener object
+ `isAlreadyRegistered(listener)`
+#### Remove a listener by event name
+ `remove(eventName)`
+#### Trigger handler via event name
+ `fire(eventName)`
+
+
 ## Getting Started
 Install the module with: `npm install message-bus`
 
@@ -30,18 +43,6 @@ function login(credentials) {
 }
 
 ```
-
-## Documentation
-This package provides a framework-agnostic PubSub implementation and contains the following API:
-
-#### Register a listener
- `register(eventName, functionHandler, executionContext)`
-#### Check for the existence of a registered listener object
- `isAlreadyRegistered(listener)`
-#### Remove a listener by event name
- `remove(eventName)`
-#### Trigger handler via event name
- `fire(eventName)`
 
 <!--
 ## Examples
